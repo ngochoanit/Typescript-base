@@ -1,17 +1,11 @@
-//INTERFACE
-interface Person {
-  name: string;
-  age: number;
-  speak: (lang: string) => void;
-  spend(amount: number): void;
-}
-const Hoan: Person = {
-  name: "Hoan",
-  age: 20,
-  speak: (text: string) => console.log(text),
-  spend: (money: number) => console.log(money),
-};
+//INTERFACE FOR CLASS
 
-Hoan.speak("English");
-Hoan.spend(1000);
-console.log(Hoan.speak);
+import { Invoid, Payment } from "./classImplementInterface";
+import { HasPrint } from "./interfaceForClass";
+
+const documentOne: HasPrint = new Invoid("vinamilk", "drink milk", 50000);
+const documentTwo: HasPrint = new Payment("VietNam Airlines", "fly", 60000);
+const allDocuments: HasPrint[] = [];
+allDocuments.push(documentOne);
+allDocuments.push(documentTwo);
+console.log(allDocuments);
